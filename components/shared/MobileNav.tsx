@@ -68,31 +68,7 @@ const MobileNav = () => {
                                     </li>
                                 )
                             })}
-                            </ul>
-                            <ul className="sidebar-nav_elements">
-                            {navLinks.map((link) =>{
-                                    const isActive = link.route === pathname
-                                    
-                                    return (
-                                        <li key={link.route} className={`sidebar-nav_element group ${
-                                            isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'
-                                        }`}>
-                                            <Link className="sidebar-link cursor-pointer" href={link.route}>
-                                                <Image
-                                                    src={link.icon}
-                                                    alt="logo"
-                                                    width={24}
-                                                    height={24}                                                     
-                                                />
-                                                {link.label}
-                                            </Link>
-                                        </li>
-                                    )
-                                })}
-                                <li className="flex-center cursor-pointer gap-2 p-4">
-                                    <UserButton afterSignOutUrl='/' showName />
-                                </li>
-                            </ul>                          
+                            </ul>                                                      
                         </>
                     </SheetContent>
                 </Sheet>
