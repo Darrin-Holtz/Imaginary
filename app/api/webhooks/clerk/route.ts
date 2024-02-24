@@ -53,6 +53,9 @@ export async function POST(req: Request) {
     });
   }
 
+  // Log the event type
+  console.log("Webhook event type:", evt.type);
+
   // Get the ID and type
   const { id } = evt.data;
   const eventType = evt.type;
