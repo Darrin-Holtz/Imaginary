@@ -29,7 +29,7 @@ export async function POST(request: Request) {
 
 console.log('Connected to Endpoint');
 
-export async function webhookHandler(req: Request) {
+export async function handleWebhook(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
@@ -138,4 +138,4 @@ export async function webhookHandler(req: Request) {
   return new Response("", { status: 200 });
 }
 
-export default webhookHandler;
+export default handleWebhook;
